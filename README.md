@@ -6,3 +6,6 @@ recoder jihe-daily [name:x_jihee]
 1. first commit
     - creat project
     - spring boot
+2. second commit
+    - download 'postman'
+    - map, vo(value object) type  
