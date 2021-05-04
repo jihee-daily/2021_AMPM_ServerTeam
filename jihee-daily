@@ -1,0 +1,40 @@
+[33mcommit 05720480227aac35badc76ed2435120abb1edd63[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: dc321b6 fd6ce50
+Author: jihee-daily <kim76955@gmail.com>
+Date:   Sat Apr 10 18:14:18 2021 +0900
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit dc321b6fffce5b0356973d38f88623bd1e83b755[m
+Author: jihee-daily <kim76955@gmail.com>
+Date:   Sat Apr 10 00:10:20 2021 +0900
+
+    Revert "Revert "과제1>log""
+    
+    This reverts commit 1d42f1f0a8a7a6b0b9cdad9522ada79436ba4e7a.
+
+[33mcommit 1d42f1f0a8a7a6b0b9cdad9522ada79436ba4e7a[m
+Author: jihee-daily <kim76955@gmail.com>
+Date:   Fri Apr 9 23:54:49 2021 +0900
+
+    Revert "과제1>log"
+    
+    This reverts commit 72200e1fa24784ef318bbb2c1352fe37989bac91.
+
+[33mcommit 72200e1fa24784ef318bbb2c1352fe37989bac91[m
+Author: jihee-daily <kim76955@gmail.com>
+Date:   Fri Apr 9 23:41:18 2021 +0900
+
+    과제1>log
+
+[33mcommit fd6ce5074beacbd479f51248dec5f173ea1f9d31[m
+Author: jihee-daily <66589666+jihee-daily@users.noreply.github.com>
+Date:   Fri Apr 9 21:00:32 2021 +0900
+
+    Create README.md
+
+[33mcommit 2f2a4a66bb8b9f631a0a363b4d344bb9ec1c6e21[m
+Author: jihee-daily <kim76955@gmail.com>
+Date:   Fri Apr 9 20:13:45 2021 +0900
+
+    first Upload to the Repository
