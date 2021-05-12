@@ -8,4 +8,7 @@ recoder jihe-daily [name:x_jihee]
     - spring boot
 2. second commit
     - download 'postman'
-    - map, vo(value object) type  
+    - map, vo(value object) type
+3. third commit
+    - POST, DELETE mapping
+    - DB구축 대신, HashMap과 ArrayList 활용
