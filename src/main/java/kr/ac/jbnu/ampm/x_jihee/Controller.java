@@ -104,11 +104,12 @@ public class Controller {
         if(!testDBHashMap.isEmpty()){
             if(id != null && !id.equals("") && testDBHashMap.containsKey(id)){
                 postValueArrayList = testDBHashMap.get(id);
-                Map<String, Object> map = postValueArrayList.iterator().next();
-                if (requestMap.keySet().equals(map.keySet())) {
-                    postValueArrayList.set(postValueArrayList.indexOf(map), requestMap);
-                    testDBHashMap.replace(id, postValueArrayList);
-                    responseEntity = new ResponseEntity<>(requestMap, HttpStatus.OK);
+                for(Map map : postValueArrayList) {
+                    if (requestMap.keySet().equals(map.keySet())) {
+                        postValueArrayList.set(postValueArrayList.indexOf(map), requestMap);
+                        testDBHashMap.replace(id, postValueArrayList);
+                        responseEntity = new ResponseEntity<>(requestMap, HttpStatus.OK);
+                    }
                 }
 
             }else{
