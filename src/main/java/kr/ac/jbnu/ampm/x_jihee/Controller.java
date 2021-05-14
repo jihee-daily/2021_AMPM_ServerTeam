@@ -1,5 +1,6 @@
 package kr.ac.jbnu.ampm.x_jihee;
-//import lombok.extern.slf4j.Slf4j;
+
+import com.sun.xml.internal.fastinfoset.util.CharArrayIntMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -7,14 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 public class Controller {
-    // get 부터 id로 받는거 ->type을 받기,post,delete
-    // 1.testdb 2.get all 3.get id 4.post 5.delete
 
     private static HashMap<String, ArrayList<Map<String, Object>>> testDBHashMap =new HashMap<String,ArrayList<Map<String, Object>>>();
 
@@ -51,7 +48,7 @@ public class Controller {
 
     @RequestMapping(value = "/post/{id}", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
-    public ResponseEntity<?> getResponseEntity(HttpServletRequest request, @PathVariable String id, @RequestBody Map<String, Object> requestMap){
+    public ResponseEntity<?> postResponseEntity(HttpServletRequest request, @PathVariable String id, @RequestBody Map<String, Object> requestMap){
         ResponseEntity<?> responseEntity = null;
         ArrayList<Map<String, Object>> postValueArrayList = null;
 
@@ -94,6 +91,34 @@ public class Controller {
         }else{
             responseEntity = new ResponseEntity<>("NOT_CONTAIN", HttpStatus.BAD_REQUEST);
         }
+
+        return responseEntity;
+    }
+
+    @RequestMapping(value = "/put/{id}", method = RequestMethod.PUT, produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<?> putResponseEntity(HttpServletRequest request, @PathVariable String id, @RequestBody Map<String, Object> requestMap){
+        ResponseEntity<?> responseEntity = null;
+        ArrayList<Map<String, Object>> postValueArrayList = null;
+
+        if(!testDBHashMap.isEmpty()){
+            if(id != null && !id.equals("") && testDBHashMap.containsKey(id)){
+
+                postValueArrayList = testDBHashMap.get(id);
+
+                if (postValueArrayList.equals(requestMap.keySet())) {
+                    testDBHashMap.replace(id, postValueArrayList);
+                    responseEntity = new ResponseEntity<>(requestMap, HttpStatus.OK);
+                } else {
+                        responseEntity = new ResponseEntity<>("NOT_FOUND", HttpStatus.NOT_FOUND);
+                }
+            }else{
+                responseEntity = new ResponseEntity<>("NOT_CONTAIN", HttpStatus.NOT_FOUND);
+            }
+        }else{
+            responseEntity = new ResponseEntity<>("NOT_CONTAIN", HttpStatus.BAD_REQUEST);
+        }
+
 
         return responseEntity;
     }
