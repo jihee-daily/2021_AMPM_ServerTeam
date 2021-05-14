@@ -1,10 +1,10 @@
 # 2021_AMPM_ServerTeam
-recoder jihe-daily [name:x_jihee]  
-..Jeonbuk National University/the software engineering/club AMPM-Sever Team
+recoder jihee-daily [name:x_jihee]  
+..Jeonbuk National University/the software engineering/club AMPM-Sever
 ***
 #### Day 1.
     - creat project
-    - spring boot
+    - using SpringBoot
 #### Day 2.
     - download 'postman'
     - map, vo(value object) type
