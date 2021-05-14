@@ -103,15 +103,14 @@ public class Controller {
 
         if(!testDBHashMap.isEmpty()){
             if(id != null && !id.equals("") && testDBHashMap.containsKey(id)){
-
                 postValueArrayList = testDBHashMap.get(id);
-
-                if (postValueArrayList.equals(requestMap.keySet())) {
+                Map<String, Object> map = postValueArrayList.iterator().next();
+                if (requestMap.keySet().equals(map.keySet())) {
+                    postValueArrayList.set(postValueArrayList.indexOf(map), requestMap);
                     testDBHashMap.replace(id, postValueArrayList);
                     responseEntity = new ResponseEntity<>(requestMap, HttpStatus.OK);
-                } else {
-                        responseEntity = new ResponseEntity<>("NOT_FOUND", HttpStatus.NOT_FOUND);
                 }
+
             }else{
                 responseEntity = new ResponseEntity<>("NOT_CONTAIN", HttpStatus.NOT_FOUND);
             }
