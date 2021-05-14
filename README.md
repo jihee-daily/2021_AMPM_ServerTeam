@@ -1,14 +1,13 @@
 # 2021_AMPM_ServerTeam
-
-recoder jihe-daily [name:x_jihee]  
-..Jeonbuk National University/the software engineering/club AMPM-Sever Team
-
-1. first commit
+recoder jihee-daily [name:x_jihee]  
+..Jeonbuk National University/the software engineering/club AMPM-Sever
+***
+#### Day 1.
     - creat project
-    - spring boot
-2. second commit
+    - using SpringBoot
+#### Day 2.
     - download 'postman'
     - map, vo(value object) type
-3. third commit
-    - POST, DELETE mapping
+#### Day 3.
+    - POST, DELETE, PUT
     - DB구축 대신, HashMap과 ArrayList 활용
